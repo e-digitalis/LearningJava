@@ -1,4 +1,4 @@
-package lesson2;
+package lesson2ControlFlowAndConditionals;
 
 public class IfStatements {
 
