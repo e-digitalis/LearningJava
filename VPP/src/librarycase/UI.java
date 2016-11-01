@@ -9,10 +9,11 @@ public class UI {
 	}
 
 	public void printBook(Book book) {
-		
-	// not necessary once we created the method overload	String bookIDString = String.valueOf(book.getBookID());
-		
-		System.out.println(fixLengthString(book.getBookID(),6) + "  " + fixLengthString(book.getTitle(), 20) + "  "
+
+		// not necessary once we created the method overload String bookIDString
+		// = String.valueOf(book.getBookID());
+
+		System.out.println(fixLengthString(book.getBookID(), 6) + "  " + fixLengthString(book.getTitle(), 20) + "  "
 				+ fixLengthString(book.getAuthor(), 20) + "  " + book.getIsbn());
 	}
 
@@ -30,12 +31,24 @@ public class UI {
 		}
 
 	}
-	
-	private String fixLengthString(int start, int length){
+
+	private String fixLengthString(int start, int length) {
 		String startString = String.valueOf(start);
-		return fixLengthString(startString,length);
-		
-		//Method overloading
-		
+		return fixLengthString(startString, length);
+
+		// Method overloading
+
 	}
+
+	public void printBookCatalog(Book[] bookCatalog) {
+
+		for (int counter = 0; counter < bookCatalog.length; counter++) {
+			if (bookCatalog[counter] != null) {
+				printBook(bookCatalog[counter]);
+			}
+
+		}
+
+	}
+
 }
