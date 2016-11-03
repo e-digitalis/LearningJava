@@ -9,7 +9,7 @@ public class RollDice {
 
 	public static double  randomNumber = Math.random();
 
-	public static void createRandomNumber(){
+	public static double createRandomNumber(){
 		randomNumber = (randomNumber * 6) + 1; 
 		//making the range go from 1-6 instead of 0 to .9
 
@@ -17,6 +17,10 @@ public class RollDice {
 		//casting as int to truncate decimals
 		
 		System.out.println(randomInt);
+		
+		return randomInt;
+		
+		
 
 	}
 }	
