@@ -1,6 +1,6 @@
 package vppcoding;
 
-public class Backgroundinfo {
+public class InstallJDKathome {
 
 	public static void main(String[] args) {
 		System.out.println("ladda ned Java SE från Oracle"

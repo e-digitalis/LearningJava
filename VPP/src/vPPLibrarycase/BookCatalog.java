@@ -1,4 +1,4 @@
-package librarycase;
+package vPPLibrarycase;
 
 public class BookCatalog {
 

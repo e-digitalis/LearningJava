@@ -1,4 +1,7 @@
-package librarycase;
+package vPPLibrarycase;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class Customer {
 
@@ -11,6 +14,7 @@ public class Customer {
 	private int customerNumber;
 	private GenderType gender;
 	private boolean isValid;
+	private Date expiryDate;
 
 	public Customer(String title, String firstName, String lastName, String address, String phoneNumber, String eMail,
 			int customerNumber, GenderType gender) {
@@ -35,6 +39,10 @@ public class Customer {
 		this.gender = gender;
 		this.isValid = true;
 
+		GregorianCalendar gCal = new GregorianCalendar();
+		gCal.add(GregorianCalendar.YEAR, 1);
+		this.expiryDate = gCal.getTime();
+		
 	}
 
 	public String gettitle() {
@@ -69,6 +77,10 @@ public class Customer {
 		return gender;
 	}
 
+	public Date getExpiryDate(){
+		return expiryDate;
+	}
+	
 	public boolean isValid() {
 		return isValid;
 	}

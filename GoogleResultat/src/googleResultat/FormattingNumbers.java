@@ -7,7 +7,6 @@ public class FormattingNumbers {
 	public static void main(String[] args) {
 
 		average();
-
 	}
 
 	public static void average() {

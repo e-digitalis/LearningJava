@@ -1,4 +1,4 @@
-package librarycase;
+package vPPLibrarycase;
 
 public class Main {
 
@@ -7,9 +7,23 @@ public class Main {
 		//Book[] bookCatalog = new Book[10];
 		BookCatalog bookCatalog = new BookCatalog();
 
-		Book book1 = new Book(1, "introduction to Java", "MG", "123456");
-		Book book2 = new Book(2, "better Java", "Maria Liszlo", "234567");
+		Book book1 = new Book(1, "introduction to Java", "MG", "123456", "Anytown", 400);
+		Book book2 = new Book(2, "better Java", "Maria Liszlo", "234567", "Anytown", 150);
 
+		DVD dvd1 = new DVD(4, "Epic Java reel!", "Some branch", "Alma Dirr", 456798, 120);
+		Customer customer = new Customer("Dr.","Lissssie","La","Hejvägen","0812345678","liss@great.com",1,GenderType.OTHER);
+		
+		System.out.println(dvd1.getTitle());
+		book1.relocate("Forest Branch");
+		System.out.println(dvd1.lend(customer));
+		dvd1.licence();
+		if (dvd1.isLicenced()){
+			System.out.println("Yes, it is licenced!");
+		} else {
+			System.out.println("Uhoh! Better check that licence!");
+		}
+
+		
 //		bookCatalog[0] = book1;
 //		bookCatalog[1] = book2;
 		
@@ -25,6 +39,9 @@ public class Main {
 		if (foundBook != null){
 			System.out.println("We found " + foundBook.getTitle());
 		}
+		
+			System.out.println(customer.getExpiryDate());
+		
 	}
 
 	// ui.printBook(book1);

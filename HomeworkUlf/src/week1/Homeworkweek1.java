@@ -9,20 +9,19 @@ public class Homeworkweek1 {
 	public static void main(String[] args) {
 
 		Random createRandomOperation = new Random();
-
+		int rVToGuess = createRandomOperation.nextInt(10);
+		
 		// Bardias random code
 		// double randomNumbe = Math.random();
 		// randomNumbe = (randomNumbe * 1000) + 1;
 		// int randomInt = (int)randomNumbe;
 
-		int rVToGuess = createRandomOperation.nextInt(10);
-
+		
 		// System.out.println(createRandomOperation.nextInt(1000));
 		// System.out.println(variableToGuess);
 
 		String guess = JOptionPane.showInputDialog("Please guess a number, any number from 0-10!");
 		int intGuess = Integer.parseInt(guess);
-		;
 
 		while (intGuess != rVToGuess) {
 			if (intGuess > rVToGuess) {

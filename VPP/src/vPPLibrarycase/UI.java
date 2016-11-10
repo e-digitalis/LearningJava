@@ -1,4 +1,4 @@
-package librarycase;
+package vPPLibrarycase;
 
 public class UI {
 
@@ -13,7 +13,7 @@ public class UI {
 		// not necessary once we created the method overload String bookIDString
 		// = String.valueOf(book.getBookID());
 
-		System.out.println(fixLengthString(book.getBookID(), 6) + "  " + fixLengthString(book.getTitle(), 20) + "  "
+		System.out.println(fixLengthString(book.getID(), 6) + "  " + fixLengthString(book.getTitle(), 20) + "  "
 				+ fixLengthString(book.getAuthor(), 20) + "  " + book.getIsbn());
 	}
 
