@@ -8,6 +8,7 @@ public class Book extends Material {
 	private String author;
 	private String isbn;
 	private int noOfPages;
+	private final String materialType = "Book";
 
 	public Book(int bookID, String title, String author, String isbn, String branch, int noOfPages) {
 		super(bookID, title, branch);
@@ -27,6 +28,15 @@ public class Book extends Material {
 
 	public void sendForRepair(){
 		System.out.println("Book has been sent to repair");
+	}
+
+	@Override
+	public int getLoanPeriod() {
+		return 21;
+	}
+
+	public String getMaterialType() {
+		return materialType;
 	}
 	
 }

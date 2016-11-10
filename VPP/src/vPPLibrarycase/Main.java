@@ -1,31 +1,43 @@
 package vPPLibrarycase;
 
+import java.util.Scanner;
+
 public class Main {
+
+	public static Scanner myScan = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-		//Book[] bookCatalog = new Book[10];
+		// Book[] bookCatalog = new Book[10];
 		BookCatalog bookCatalog = new BookCatalog();
 
+		// creating new book objects
 		Book book1 = new Book(1, "introduction to Java", "MG", "123456", "Anytown", 400);
 		Book book2 = new Book(2, "better Java", "Maria Liszlo", "234567", "Anytown", 150);
 
+		// Creating new DVD objects
 		DVD dvd1 = new DVD(4, "Epic Java reel!", "Some branch", "Alma Dirr", 456798, 120);
-		Customer customer = new Customer("Dr.","Lissssie","La","Hejvägen","0812345678","liss@great.com",1,GenderType.OTHER);
+		Customer customer = new Customer("Dr.", "Lissssie", "La", "Hejvägen", "0812345678", "liss@great.com", 1,
+				GenderType.OTHER);
+	
+		book1.relocate("Forest Branch"); 
+		// sending material to other branch
 		
-		System.out.println(dvd1.getTitle());
-		book1.relocate("Forest Branch");
-		System.out.println(dvd1.lend(customer));
-		dvd1.licence();
-		if (dvd1.isLicenced()){
-			System.out.println("Yes, it is licenced!");
-		} else {
-			System.out.println("Uhoh! Better check that licence!");
-		}
+		dvd1.license();
+		// calling the licence method to set the variable licensed to true
 
-		
-//		bookCatalog[0] = book1;
-//		bookCatalog[1] = book2;
+		CheckingMethods.printMaterialTitle(dvd1);
+		// to print the title of any material (book, DVD or other future material implemented)
+		// choose this method - send the adequate reference
+
+		// checked if DVD is licensed and can be lent out
+		System.out.println(dvd1.lend(customer)); 
+		System.out.println(dvd1.lend(customer) + " trying to lend DVD - shouldn't work b/c already on loan \n");
+		System.out.println(book1.lend(customer) + " trying to lend book - success");
+		System.out.println(book1.lend(customer) + " trying to lend book - shouldn't work b/c already on loan");
+
+		// bookCatalog[0] = book1;
+		// bookCatalog[1] = book2;
 		
 		bookCatalog.addBook(book1);
 		bookCatalog.addBook(book2);
@@ -34,53 +46,34 @@ public class Main {
 		ui.printHeader();
 
 		ui.printBookCatalog(bookCatalog.getBookArray());
-		
+
 		Book foundBook = bookCatalog.findBook("Better Java");
-		if (foundBook != null){
+		if (foundBook != null) {
 			System.out.println("We found " + foundBook.getTitle());
 		}
-		
-			System.out.println(customer.getExpiryDate());
-		
+
+		System.out.println(customer.getExpiryDate());
+
+		// Material material = new Material(10,"aaa","town"); //if not abstract,
+		// Material objects can be created
+
+		// checkLoanPeriod(book1, dvd1); to call this method I need to send the
+		// variables (or declare them at class level)
+
+		myScan.close();
+
 	}
 
-	// ui.printBook(book1);
-	// ui.printBook(book2);
+	public static void checkLoanPeriod(Book bookAnyName, DVD dvdAnyName) { 
+		// code written to verify functionality
+		System.out.println(bookAnyName.getLoanPeriod()); 
+		// code that checks if return period is working as intended
+		System.out.println(dvdAnyName.getLoanPeriod());
+		// code that checks if return period is working as intended
+	}
 
-	// Customer joanne = new Customer("doctor", "Joanne", "Lassiter",
-	// "Hejvägen", "89561245", "jo@g.com", 1,
-	// GenderType.FEMALE);
-	// Customer somin = new Customer("teacher", "Somin", "Raxi", "Hejvägen",
-	// "89561245", "jo@g.com", 2,
-	// GenderType.OTHER);
-	// Customer bardia = new Customer("java coach", "Bardia", "Fathi",
-	// "Hejvägen", "895623", "bardia@hejhe.com", 3,
-	// GenderType.MALE);
-	//
-	// // joanne.setName("doctor", "Joanne", "Lassiter");
-	// // somin.setName("teacher", "Somin", "Raxi");
-	//
-	// /*
-	// * The setname function only works if it's public Since we changed it
-	// to
-	// * private, it won't work any longer
-	// */
-	//
-	// System.out.println(joanne.getfirstName());
-	// System.out.println(somin.getfirstName());
-	// System.out.println(bardia.getfirstName());
-	//
-	// System.out.println(joanne.getMailingName());
-	// System.out.println(somin.getMailingName());
-	// System.out.println(bardia.getMailingName());
-	//
-	// System.out.println(somin.getGender());
-	// System.out.println(joanne.getGender());
-	//
-	// if (somin.getGender() == GenderType.OTHER){
-	// System.out.println("Defined as other.");
-	// }
+	public static void checkLicenceAndLoanStatus(Book bookAName, DVD dvdAName) {
+
+	}
 
 }
-
-
