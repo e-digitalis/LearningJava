@@ -60,6 +60,10 @@ public class Main {
 		// checkLoanPeriod(book1, dvd1); to call this method I need to send the
 		// variables (or declare them at class level)
 
+		System.out.println(dvd1.getClass());
+	//	dvd1.lastIndexOf(dvd1.getClass());
+	// BARDIA!!!	
+		
 		myScan.close();
 
 	}
