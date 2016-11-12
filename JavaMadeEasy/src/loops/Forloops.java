@@ -11,8 +11,13 @@ public class Forloops {
 		
 		int n = 9;
 		System.out.println("before ++: "+n);
-		++n;	//det spelar ingen roll om ++ är före eller efter 
-				// pga att ++ endast påverkar det som är inom samma rad
+		++n;	
+		/* det spelar ingen roll om ++ Ã¤r fÃ¶re eller efter 
+		*pga att ++ endast pÃ¥verkar det som Ã¤r inom samma rad
+		*
+		* in this case it doesn't matterwhere ++ is located, before or after the operand,
+		* since it's on the same line - just adding, no other operations performed */
+		
 		System.out.println("after ++: "+n);
 		n--;
 		System.out.println("after --: "+n);
