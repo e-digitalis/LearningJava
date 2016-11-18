@@ -39,4 +39,12 @@ public class OtherCode {
 	// System.out.println("Defined as other.");
 	// }
 	
+
+
+private void checkForNull(){
+//	Book foundBook = bookCatalog.findBook("Better Java");
+//	if (foundBook != null) {
+//		System.out.println("We found " + foundBook.getTitle());
+//	}
+}
 }

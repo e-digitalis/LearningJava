@@ -14,7 +14,7 @@ public class BookCatalog {
 		nextPosition++;
 	}
 
-	public Book findBook(String title) {
+	public Book findBook(String title) throws BookNotFoundException{
 
 		for (int counter = 0; counter < nextPosition; counter++) {
 			if (bookArray[counter].getTitle().equalsIgnoreCase(title)) {
@@ -22,7 +22,10 @@ public class BookCatalog {
 			}
 		}
 
+		throw new BookNotFoundException();
 		return null;
+		
+		
 	}
 
 }

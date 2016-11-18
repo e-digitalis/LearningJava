@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="AaaaCleanScreen/src"/>
+	<classpathentry kind="src" path="Bitas PPT material/src"/>
+	<classpathentry kind="src" path="Exams/src"/>
+	<classpathentry kind="src" path="Excercises/src"/>
+	<classpathentry kind="src" path="First program with anteckningar/src"/>
+	<classpathentry kind="src" path="GoogleResultat/src"/>
+	<classpathentry kind="src" path="HomeworkBita/src"/>
+	<classpathentry kind="src" path="HomeworkProjects/src"/>
+	<classpathentry kind="src" path="HomeworkUlf/src"/>
+	<classpathentry kind="src" path="JavaMadeEasy/src"/>
+	<classpathentry kind="src" path="LaddaNedEclipseHemma/src"/>
+	<classpathentry kind="src" path="Udacity/src"/>
+	<classpathentry kind="src" path="Udemy/src"/>
+	<classpathentry kind="src" path="Ulfs_lectures/src"/>
+	<classpathentry kind="src" path="Ulfs_material/src"/>
+	<classpathentry kind="src" path="VPP/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="AaaaCleanScreen/bin"/>
+</classpath>
