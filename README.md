@@ -1,4 +1,4 @@
-# Udacity
+# LearningJava - the basic fundamentals
 Projects to learn Java8 for beginners, Udacity, Excercises and more
 
 
