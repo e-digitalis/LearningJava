@@ -23,9 +23,8 @@ public class BookCatalog {
 		}
 
 		throw new BookNotFoundException();
-		return null;
 		
-		
+	
 	}
 
 }
